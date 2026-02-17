@@ -9,7 +9,7 @@ import seaborn as sns
 df = pd.read_csv("city_demographics_final.csv")
 
 # Select features for clustering
-features = ['Avg_Household_Size', 'Median_Age', 'Dependency_Ratio', 'Pct_Single', 'Pct_Married', 'Pct_Divorced']
+features = ['Avg_Household_Size', 'Median_Age', 'Pct_Single', 'Pct_Married', 'Pct_Divorced']
 
 # Drop rows with missing values
 df_clean = df.dropna(subset=features)
@@ -47,25 +47,60 @@ print("\nRepresentative Cities:")
 for i, cities in representatives.items():
     print(f"Cluster {i}: {', '.join(cities)}")
 
-# Save results to Markdown
-with open("analysis_report_generated.md", "w") as f:
-    f.write("# Demographic Analysis & City Segmentation\n\n")
-    f.write(f"Based on data from {len(df_clean)} cities.\n\n")
+# Save results to Markdown with Qualitative Focus (Turkish)
+with open("analysis_report_generated.md", "w", encoding="utf-8") as f:
+    f.write("# Nitel Araştırma İçin Saha Seçim Stratejisi\n\n")
+    f.write(f"**Amaç:** {len(df_clean)} şehir arasından, nitel saha çalışması için farklı demografik profilleri temsil eden şehirleri belirlemek.\n\n")
+    f.write(f"**Kullanılan Veriler:** Ortalama Hanehalkı Büyüklüğü, Ortanca Yaş, Medeni Durum (Bekar/Evli/Boşanmış). *Bağımlılık Oranı (hatalı veri) hariç tutulmuştur.*\n\n")
     
-    f.write("## Cluster Profiles\n")
+    f.write("## Belirlenen Araştırma Profilleri\n")
     for i in range(4):
         stats = cluster_stats.loc[i]
         reps = representatives[i]
         
-        f.write(f"### Cluster {i}\n")
-        f.write(f"**Representative Cities:** {', '.join(reps)}\n\n")
-        f.write("**Characteristics:**\n")
-        f.write(f"- Avg Household Size: {stats['Avg_Household_Size']:.2f}\n")
-        f.write(f"- Median Age: {stats['Median_Age']:.1f}\n")
-        f.write(f"- Dependency Ratio: {stats['Dependency_Ratio']:.1f}\n")
-        f.write(f"- Single: {stats['Pct_Single']*100:.1f}%\n")
-        f.write(f"- Married: {stats['Pct_Married']*100:.1f}%\n")
-        f.write(f"- Divorced: {stats['Pct_Divorced']*100:.1f}%\n")
+        # Determine a descriptive name based on stats (Turkish)
+        name = f"Profil {i+1}"
+        desc = []
+        justification = ""
+        
+        if stats['Avg_Household_Size'] > 3.8: 
+            desc.append("Geniş Aileler")
+            justification += "Geleneksel geniş aile yapısını ve akrabalık ilişkilerini incelemek için idealdir. "
+        elif stats['Avg_Household_Size'] < 2.9: 
+            desc.append("Çekirdek/Küçük Haneler")
+            justification += "Bireyselleşme ve modern çekirdek aile dinamiklerini gözlemlemek için uygundur. "
+        
+        if stats['Median_Age'] < 30: 
+            desc.append("Genç Nüfus")
+            justification += "Gençlerin hayata bakışını ve eğitim/iş beklentilerini anlamak için seçilmelidir. "
+        elif stats['Median_Age'] > 37: 
+            desc.append("Olgun Nüfus")
+            justification += "Yaşlanan nüfusun ihtiyaçlarını ve kuşak çatışmalarını incelemek için elverişlidir. "
+        
+        if stats['Pct_Single'] > 0.30: 
+            desc.append("Yüksek Bekar Oranı")
+        if stats['Pct_Divorced'] > 0.025: 
+            desc.append("Yüksek Boşanma Oranı")
+            justification += "Değişen aile yapısı ve boşanma sonrası yaşam pratiklerini araştırmak için önemlidir. "
+            
+        if not justification:
+            justification = "Ortalama Türkiye demografisini temsil eden standart bir profil."
+        
+        if desc: name = f"Profil {i+1}: {' & '.join(desc)}"
+        
+        f.write(f"### {name}\n")
+        f.write(f"**Neden Bu Profil Seçilmeli?**\n")
+        f.write(f"{justification}\n\n")
+        
+        f.write(f"**Hedef Demografi Özellikleri:**\n")
+        f.write(f"- Hane Yapısı: {'Geniş (>3.8)' if stats['Avg_Household_Size'] > 3.8 else 'Standart/Küçük'}\n")
+        f.write(f"- Yaş Grubu: {'Genç (<30)' if stats['Median_Age'] < 30 else 'Olgun (>37)' if stats['Median_Age'] > 37 else 'Orta Yaş'}\n")
+        f.write(f"- Medeni Durum: %{stats['Pct_Married']*100:.1f} Evli, %{stats['Pct_Divorced']*100:.1f} Boşanmış\n\n")
+        
+        f.write(f"**Önerilen Saha Şehirleri (Temsili):**\n")
+        for city in reps[:3]:
+            f.write(f"- **{city}**\n")
         f.write("\n")
+        f.write("---\n")
 
 print("Analysis complete. Report saved to analysis_report_generated.md")
