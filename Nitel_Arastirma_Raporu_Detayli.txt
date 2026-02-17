@@ -1,0 +1,57 @@
+NİTEL ARAŞTIRMA SAHA SEÇİM RAPORU (DETAYLI ANALİZ)
+==================================================
+
+Bu rapor, şehirleri demografik özelliklerine göre (Hane büyüklüğü, Boşanma, Bekarlık) 4 ana gruba ayırır.
+
+1. KÜME ORTALAMALARI (YÜZDELER)
+------------------------------
+Küme  Hane Büy.    Boşanma %    Bekar %     
+0.0   3.20         3.1          30.8        
+1.0   4.30         1.4          38.3        
+2.0   2.79         6.7          26.8        
+3.0   2.84         4.7          25.6        
+------------------------------
+*Değerler ortalamadır. Boşanma ve Bekar oranları yüzde (%) cinsindendir.
+
+2. PROFİL DETAYLARI VE ŞEHİR ÖNERİLERİ
+==================================================
+
+### Profil 1: Yüksek Boşanma & Genç/Bekar Nüfus
+Özet: Ort. Hane: 3.2, Boşanma: %3.1, Bekar: %30.8
+
+Önerilen Şehirler (Örnekler):
+  * Adıyaman
+  * Bingöl
+  * Elazığ
+  * Erzurum
+  * Gaziantep
+
+### Profil 2: Geniş Aile & Genç/Bekar Nüfus
+Özet: Ort. Hane: 4.3, Boşanma: %1.4, Bekar: %38.3
+
+Önerilen Şehirler (Örnekler):
+  * Ağrı
+  * Bitlis
+  * Diyarbakır
+  * Hakkari
+  * Mardin
+
+### Profil 3: Çekirdek/Küçük Aile & Yüksek Boşanma
+Özet: Ort. Hane: 2.8, Boşanma: %6.7, Bekar: %26.8
+
+Önerilen Şehirler (Örnekler):
+  * Adana
+  * Ankara
+  * Antalya
+  * Aydın
+  * Balıkesir
+
+### Profil 4: Çekirdek/Küçük Aile & Yüksek Boşanma
+Özet: Ort. Hane: 2.8, Boşanma: %4.7, Bekar: %25.6
+
+Önerilen Şehirler (Örnekler):
+  * Afyonkarahisar
+  * Amasya
+  * Artvin
+  * Bilecik
+  * Bolu
