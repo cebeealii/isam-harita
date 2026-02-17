@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Aile Araştırması Haritaları</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .map-link {
+            display: block;
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s;
+        }
+
+        .map-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .map-title {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .map-desc {
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Türkiye Aile Araştırması İnteraktif Haritaları</h1>
+    <p>Aşağıdaki bağlantılara tıklayarak detaylı haritaları inceleyebilirsiniz:</p>
+
+    <a href="turkiye_aile_arastirmasi_haritasi.html" class="map-link">
+        <div class="map-title">Genel Aile Araştırması Haritası</div>
+        <div class="map-desc">Hanehalkı büyüklüğü, yaş ve diğer demografik verilerin genel görünümü.</div>
+    </a>
+
+    <a href="marital_status_map.html" class="map-link">
+        <div class="map-title">Medeni Durum Haritası</div>
+        <div class="map-desc">İllere göre evlilik, boşanma ve bekar oranları.</div>
+    </a>
+
+    <a href="household_size_map.html" class="map-link">
+        <div class="map-title">Hanehalkı Büyüklüğü Haritası</div>
+        <div class="map-desc">İllere göre ortalama hanehalkı büyüklüğü dağılımı.</div>
+    </a>
+
+    <p style="text-align: center; color: #999; margin-top: 30px;">Veriler TÜİK ve Aile Araştırması kaynaklıdır.</p>
+</body>
+
+</html>
