@@ -1,49 +1,67 @@
-# Demographic Analysis & City Segmentation
+# Nitel Araştırma İçin Saha Seçim Stratejisi
 
-Based on data from 81 cities.
+**Amaç:** 81 şehir arasından, nitel saha çalışması için farklı demografik profilleri temsil eden şehirleri belirlemek.
 
-## Cluster Profiles
-### Cluster 0
-**Representative Cities:** Aydın, Zonguldak, Muğla, Eskişehir, Ankara
+**Kullanılan Veriler:** Ortalama Hanehalkı Büyüklüğü, Ortanca Yaş, Medeni Durum (Bekar/Evli/Boşanmış). *Bağımlılık Oranı (hatalı veri) hariç tutulmuştur.*
 
-**Characteristics:**
-- Avg Household Size: 2.80
-- Median Age: 39.0
-- Dependency Ratio: 43.8
-- Single: 24.4%
-- Married: 66.0%
-- Divorced: 3.3%
+## Belirlenen Araştırma Profilleri
+### Profil 1: Olgun Nüfus & Yüksek Boşanma Oranı
+**Neden Bu Profil Seçilmeli?**
+Yaşlanan nüfusun ihtiyaçlarını ve kuşak çatışmalarını incelemek için elverişlidir. Değişen aile yapısı ve boşanma sonrası yaşam pratiklerini araştırmak için önemlidir. 
 
-### Cluster 1
-**Representative Cities:** Erzurum, Elazığ, Hatay, Bayburt, Malatya
+**Hedef Demografi Özellikleri:**
+- Hane Yapısı: Standart/Küçük
+- Yaş Grubu: Olgun (>37)
+- Medeni Durum: %65.5 Evli, %3.6 Boşanmış
 
-**Characteristics:**
-- Avg Household Size: 3.34
-- Median Age: 32.1
-- Dependency Ratio: 58.6
-- Single: 32.8%
-- Married: 60.8%
-- Divorced: 1.4%
+**Önerilen Saha Şehirleri (Temsili):**
+- **Ankara**
+- **Antalya**
+- **Aydın**
 
-### Cluster 2
-**Representative Cities:** Muş, Mardin, Batman, Ağrı, Siirt
+---
+### Profil 2: Geniş Aileler & Genç Nüfus & Yüksek Bekar Oranı
+**Neden Bu Profil Seçilmeli?**
+Geleneksel geniş aile yapısını ve akrabalık ilişkilerini incelemek için idealdir. Gençlerin hayata bakışını ve eğitim/iş beklentilerini anlamak için seçilmelidir. 
 
-**Characteristics:**
-- Avg Household Size: 4.41
-- Median Age: 24.8
-- Dependency Ratio: 83.0
-- Single: 41.2%
-- Married: 55.1%
-- Divorced: 0.4%
+**Hedef Demografi Özellikleri:**
+- Hane Yapısı: Geniş (>3.8)
+- Yaş Grubu: Genç (<30)
+- Medeni Durum: %55.2 Evli, %0.5 Boşanmış
 
-### Cluster 3
-**Representative Cities:** Samsun, Bolu, Düzce, Yozgat, Kırıkkale
+**Önerilen Saha Şehirleri (Temsili):**
+- **Diyarbakır**
+- **Muş**
+- **Mardin**
 
-**Characteristics:**
-- Avg Household Size: 2.94
-- Median Age: 37.9
-- Dependency Ratio: 50.5
-- Single: 24.4%
-- Married: 66.9%
-- Divorced: 2.1%
+---
+### Profil 3: Çekirdek/Küçük Haneler & Olgun Nüfus
+**Neden Bu Profil Seçilmeli?**
+Bireyselleşme ve modern çekirdek aile dinamiklerini gözlemlemek için uygundur. Yaşlanan nüfusun ihtiyaçlarını ve kuşak çatışmalarını incelemek için elverişlidir. 
 
+**Hedef Demografi Özellikleri:**
+- Hane Yapısı: Standart/Küçük
+- Yaş Grubu: Olgun (>37)
+- Medeni Durum: %67.4 Evli, %2.2 Boşanmış
+
+**Önerilen Saha Şehirleri (Temsili):**
+- **Bolu**
+- **Isparta**
+- **Manisa**
+
+---
+### Profil 4: Yüksek Bekar Oranı
+**Neden Bu Profil Seçilmeli?**
+Ortalama Türkiye demografisini temsil eden standart bir profil.
+
+**Hedef Demografi Özellikleri:**
+- Hane Yapısı: Standart/Küçük
+- Yaş Grubu: Orta Yaş
+- Medeni Durum: %62.0 Evli, %1.5 Boşanmış
+
+**Önerilen Saha Şehirleri (Temsili):**
+- **Malatya**
+- **Elazığ**
+- **Osmaniye**
+
+---
